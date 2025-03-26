@@ -1,0 +1,14 @@
+name: Using Context in Workflow
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  context:
+    runs-on: ubuntu-latest
+    name: Use Context in Workflow
+
+    steps:
+      - name: Use GitHub Context
+        run: echo "Hello World ${{github.action}}"
